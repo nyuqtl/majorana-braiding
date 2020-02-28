@@ -1,5 +1,4 @@
-scipy==1.2.1
-qutip==4.4.1
 numpy==1.17.4
+qutip==4.4.1
 tqdm==4.19.1
 matplotlib==3.0.3
