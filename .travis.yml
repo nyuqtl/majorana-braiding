@@ -4,7 +4,7 @@ python:
 # command to install dependencies
 install:
   - pip install --upgrade setuptools
-  - pip install Cython==0.29.15
+  - pip install Cython==0.25
   - pip install scipy==1.2.3
   - pip install qutip==4.4.1
   - pip install -r requirements.txt
