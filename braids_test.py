@@ -135,17 +135,100 @@ class TestCompareCircuitEvolutions(object):
             assert are_close(fidelity0000, 1.)
             assert fidelity < fidelity0000
 
-    def test_noisy_time_teleportation(self):
+    def test_noisy_time_teleportation_z0(self):
         N = 8
         gamma = 0.05
         c_ops = [np.sqrt(gamma)*Sz(N, i) for i in range(N)]
-        states = [z0, z1, xp, xm, yp, ym, rand_ket(2)]
-        for psi in states:
-            fidelity0000, fidelity = simulateTeleportation(
-                psi,
-                continuousTeleportationSimulation,
-                continuousXXBraidingCorrectionSimulation,
-                continuousZBraidingCorrectionSimulation,
-                continuousDecodingSimulation,
-                c_ops=c_ops)
-            assert fidelity0000 > fidelity
+        psi = z0
+        fidelity0000, fidelity = simulateTeleportation(
+            psi,
+            continuousTeleportationSimulation,
+            continuousXXBraidingCorrectionSimulation,
+            continuousZBraidingCorrectionSimulation,
+            continuousDecodingSimulation,
+            c_ops=c_ops)
+        assert fidelity0000 > fidelity
+
+    def test_noisy_time_teleportation_z1(self):
+        N = 8
+        gamma = 0.05
+        c_ops = [np.sqrt(gamma)*Sz(N, i) for i in range(N)]
+        psi = z1
+        fidelity0000, fidelity = simulateTeleportation(
+            psi,
+            continuousTeleportationSimulation,
+            continuousXXBraidingCorrectionSimulation,
+            continuousZBraidingCorrectionSimulation,
+            continuousDecodingSimulation,
+            c_ops=c_ops)
+        assert fidelity0000 > fidelity
+
+    def test_noisy_time_teleportation_xp(self):
+        N = 8
+        gamma = 0.05
+        c_ops = [np.sqrt(gamma)*Sz(N, i) for i in range(N)]
+        psi = xp
+        fidelity0000, fidelity = simulateTeleportation(
+            psi,
+            continuousTeleportationSimulation,
+            continuousXXBraidingCorrectionSimulation,
+            continuousZBraidingCorrectionSimulation,
+            continuousDecodingSimulation,
+            c_ops=c_ops)
+        assert fidelity0000 > fidelity
+
+    def test_noisy_time_teleportation_xm(self):
+        N = 8
+        gamma = 0.05
+        c_ops = [np.sqrt(gamma)*Sz(N, i) for i in range(N)]
+        psi = xm
+        fidelity0000, fidelity = simulateTeleportation(
+            psi,
+            continuousTeleportationSimulation,
+            continuousXXBraidingCorrectionSimulation,
+            continuousZBraidingCorrectionSimulation,
+            continuousDecodingSimulation,
+            c_ops=c_ops)
+        assert fidelity0000 > fidelity
+
+    def test_noisy_time_teleportation_yp(self):
+        N = 8
+        gamma = 0.05
+        c_ops = [np.sqrt(gamma)*Sz(N, i) for i in range(N)]
+        psi = yp
+        fidelity0000, fidelity = simulateTeleportation(
+            psi,
+            continuousTeleportationSimulation,
+            continuousXXBraidingCorrectionSimulation,
+            continuousZBraidingCorrectionSimulation,
+            continuousDecodingSimulation,
+            c_ops=c_ops)
+        assert fidelity0000 > fidelity
+
+    def test_noisy_time_teleportation_ym(self):
+        N = 8
+        gamma = 0.05
+        c_ops = [np.sqrt(gamma)*Sz(N, i) for i in range(N)]
+        psi = ym
+        fidelity0000, fidelity = simulateTeleportation(
+            psi,
+            continuousTeleportationSimulation,
+            continuousXXBraidingCorrectionSimulation,
+            continuousZBraidingCorrectionSimulation,
+            continuousDecodingSimulation,
+            c_ops=c_ops)
+        assert fidelity0000 > fidelity
+
+    def test_noisy_time_teleportation_rand(self):
+        N = 8
+        gamma = 0.05
+        c_ops = [np.sqrt(gamma)*Sz(N, i) for i in range(N)]
+        psi = rand_ket(2)
+        fidelity0000, fidelity = simulateTeleportation(
+            psi,
+            continuousTeleportationSimulation,
+            continuousXXBraidingCorrectionSimulation,
+            continuousZBraidingCorrectionSimulation,
+            continuousDecodingSimulation,
+            c_ops=c_ops)
+        assert fidelity0000 > fidelity
