@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/nyuqtl/majorana-teleportation.svg?branch=master)](https://travis-ci.com/nyuqtl/majorana-teleportation)
+
 # Teleporting Majorana Zero Modes
 
 We derived a quantum circuit which "emulates" the quantum teleportation in 1D topological regime in which quantum information is represented by Majorana Zero Modes.
