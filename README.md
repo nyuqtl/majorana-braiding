@@ -35,3 +35,35 @@ python plotting.py
 ```
 
 Again, run `--help` to check the usage.
+
+## Results
+
+Here are some better resolution fidelity plots allowing to compare fidelity with and without the error detection mechanism.
+
+### Teleporting |0> state
+
+![psi=|0>](https://github.com/nyuqtl/majorana-teleportation/blob/master/plots/res_hpc_z0.png?raw=true "|0>")
+
+### Teleporting |1> state
+
+![psi=|1>](https://github.com/nyuqtl/majorana-teleportation/blob/master/plots/res_hpc_z1.png?raw=true "|1>")
+
+### Teleporting |+> state
+
+![psi=|+>](https://github.com/nyuqtl/majorana-teleportation/blob/master/plots/res_hpc_xp.png?raw=true "|+>")
+
+### Teleporting |-> state
+
+![psi=|->](https://github.com/nyuqtl/majorana-teleportation/blob/master/plots/res_hpc_xm.png?raw=true "|->")
+
+### Teleporting |+i> state
+
+![psi=|+i>](https://github.com/nyuqtl/majorana-teleportation/blob/master/plots/res_hpc_yp.png?raw=true "|+i>")
+
+### Teleporting |-i> state
+
+![psi=|-i>](https://github.com/nyuqtl/majorana-teleportation/blob/master/plots/res_hpc_ym.png?raw=true "|-i>")
+
+### Teleporting a random pure state
+
+![psi=|rnd>](https://github.com/nyuqtl/majorana-teleportation/blob/master/plots/res_hpc_rnd.png?raw=true "|rnd>")
