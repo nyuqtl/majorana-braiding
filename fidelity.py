@@ -56,7 +56,7 @@ results = np.zeros((3, nb))
 results[0, :] = gs
 
 for i, gamma in enumerate(tqdm(gs)):
-    c_ops = [np.sqrt(gamma)*Sz(N, i) for i in range(N)]
+    c_ops = [np.sqrt(gamma)*Sz(N, j) for j in range(N)]
     f0000, fall = simulateTeleportation(
         psi,
         continuousTeleportationSimulation,
